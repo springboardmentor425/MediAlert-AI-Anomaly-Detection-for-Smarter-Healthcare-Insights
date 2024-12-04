@@ -1,6 +1,5 @@
 
 # MediAlert: AI Anomaly Detection for Smarter Healthcare Insights  
-![infosys-nyn-tagline-jpg](https://github.com/user-attachments/assets/ac007d0b-fb9a-44f3-9fe8-b6b6466575f0)
 
 
 **Infosys Springboard Internship Program**  
