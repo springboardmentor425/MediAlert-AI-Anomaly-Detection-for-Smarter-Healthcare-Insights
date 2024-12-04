@@ -1,5 +1,5 @@
 
-### README for MediAlert: AI Anomaly Detection for Smarter Healthcare Insights  
+### MediAlert: AI Anomaly Detection for Smarter Healthcare Insights  
 
 **Infosys Springboard Internship Program**  
 
