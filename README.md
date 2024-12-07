@@ -46,4 +46,3 @@ Detect fraudulent transactions in healthcare data using advanced anomaly detecti
 **Dataset Reference:**  
 The dataset used for this project is available [here](https://www.kaggle.com/datasets/tamilsel/healthcare-providers-data).  
 
-For any queries, please contact your mentor.  
