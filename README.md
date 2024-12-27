@@ -1,53 +1,107 @@
+# MediAlert: AI-Powered Anomaly Detection for Smarter Healthcare Insights
 
-# MediAlert: AI Anomaly Detection for Smarter Healthcare Insights  
+**Internship Program:** Infosys Springboard  
+**Dataset:** [Healthcare Providers Data](https://www.kaggle.com/datasets/tamilsel/healthcare-providers-data)  
+**Objective:** Leverage machine learning and deep learning techniques to identify and analyze fraudulent healthcare transactions effectively.
 
+---
 
-**Infosys Springboard Internship Program**  
+## Overview
 
-This repository is part of the Infosys Springboard Internship Program and focuses on **MediAlert: AI Anomaly Detection for Smarter Healthcare Insights**. The project addresses healthcare fraud detection using machine learning and deep learning techniques.
-![download (2)](https://github.com/user-attachments/assets/306f5ab0-412d-4888-a3d5-117488a8f65d)
+Healthcare fraud is a critical challenge, diverting resources from essential medical services. The project aims to detect billing-related anomalies using domain knowledge and cutting-edge AI techniques. It employs Isolation Forest for unsupervised anomaly detection and Autoencoder models for deep learning-based anomaly detection.
 
+---
+
+## Workflow
+
+The project is divided into multiple modules:
+
+1. **Data Understanding and Exploratory Data Analysis (EDA):**
+   - Performed univariate and bivariate analyses to explore and visualize key features.
+   - Identified patterns and trends using domain-specific insights.
+
+2. **Data Preprocessing:**
+   - Treated missing values and standardized the data using `StandardScaler`.
+   - Encoded categorical values as required and split the data into training and validation sets.
+   - Created normalized datasets suitable for both traditional machine learning models and deep learning approaches.
+
+3. **Anomaly Detection:**
+   - **Isolation Forest:**
+     - Trained an Isolation Forest model to isolate and detect approximately 5% anomalous transactions.
+     - Utilized the domain knowledge to fine-tune hyperparameters and validate results.
+   - **Autoencoder:**
+     - Developed an Autoencoder deep learning model with mixed precision training for optimized GPU utilization.
+     - Designed and trained the model using TensorFlow, incorporating advanced callbacks like `ReduceLROnPlateau`, `EarlyStopping`, and `ModelCheckpoint`.
+     - Detected anomalies based on reconstruction errors, defining an anomaly threshold at the 95th percentile.
+
+4. **Visualization:**
+   - Plotted training and validation losses to evaluate Autoencoder performance.
+   - Visualized the reconstruction error distribution, comparing normal and anomalous transactions.
+
+---
+
+## Key Implementation Highlights
+
+### Isolation Forest
+
+- **Algorithm:** Isolation Forest  
+- **Purpose:** Anomaly detection by isolating data points that deviate significantly from the norm.  
+- **Outcome:** Successfully detected ~5% of transactions as anomalies.  
+
+### Autoencoder Model
+
+- **Architecture:**
+  - Input Layer: Equal to the number of features.
+  - Encoders: Three layers with dimensional reductions.
+  - Decoders: Three layers for reconstructing inputs.
+- **Loss Function:** Mean Squared Error (MSE).  
+- **Training Strategy:**
+  - Mixed precision training enabled for faster computation.
+  - Optimized data pipelines using TensorFlow's `tf.data` API.
+- **Callbacks:** Early stopping, learning rate adjustment, and model checkpointing.  
+- **Outcome:** Detected anomalies based on reconstruction error, with results validated using domain expertise.
+
+### Visualizations
+
+#### Training and Validation Loss
 ![download (3)](https://github.com/user-attachments/assets/d986c973-1875-4490-8be5-6644b054ba4d)
 
+#### Log-Transformed Distribution of Charges
+![download (2)](https://github.com/user-attachments/assets/306f5ab0-412d-4888-a3d5-117488a8f65d)
 
 ---
 
-### **Repository Structure**  
 
-- **Main Branch:**  
-  Contains the consolidated project, including final code, documentation, and outputs.  
 
-- **Sub-Branches:**  
-  Each intern has an individual branch that includes their code, experiments, and relevant documentation.  
+## Results and Insights
 
-- **Content Overview:**  
-  - **Individual Contributions:** Found in sub-branches.  
-  - **Final Consolidated Project:** Located in the main branch.  
+- Successfully isolated ~5% of healthcare transactions as anomalies using both Isolation Forest and Autoencoder models.
+- Deep learning-based Autoencoder demonstrated improved sensitivity in capturing subtle anomalies compared to traditional approaches.
+- The analysis highlights the effectiveness of AI-driven anomaly detection in combating healthcare fraud.
 
 ---
 
-**Objective:**  
-Detect fraudulent transactions in healthcare data using advanced anomaly detection techniques.  
+## Tools and Technologies
 
-**Modules in Focus:**  
-1. Data Collection and Exploration  
-2. Exploratory Data Analysis (EDA)  
-3. Data Preprocessing  
-4. Machine Learning Algorithm Exploration and Tuning  
-5. Deep Learning with Autoencoders  
-6. Presentation and Documentation  
+- **Programming Language:** Python  
+- **Libraries:** TensorFlow, Scikit-learn, Pandas, Matplotlib, NumPy  
+- **Models:** Isolation Forest, Autoencoder  
+- **Hardware:** Mixed precision training on GPU.  
 
 ---
 
-### **Guidelines for Interns**  
+## Future Scope
 
-1. Push individual contributions to your respective sub-branches using appropriate naming conventions.  
-2. Maintain clean, readable code with comments and markdown for observations.  
-3. Ensure all documentation and outputs align with the consolidated main branch.  
+- Integrate results with a real-time anomaly detection pipeline for healthcare providers.  
+- Explore additional algorithms like Variational Autoencoders and Generative Adversarial Networks for anomaly detection.  
+- Expand the dataset for enhanced generalizability across healthcare domains.  
 
 ---
 
-**Dataset Reference:**  
-The dataset used for this project is available [here](https://www.kaggle.com/datasets/tamilsel/healthcare-providers-data).  
+## Evaluation Criteria (Per Internship Guidelines)
 
-For any queries, please contact your mentor.  
+1. Approval on EDA findings and data preprocessing techniques.  
+2. Validation of ML and deep learning models, including performance visualizations.  
+3. Approved presentation and documentation of the final solution.
+
+---
