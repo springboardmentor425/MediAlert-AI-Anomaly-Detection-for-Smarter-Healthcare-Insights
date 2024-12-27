@@ -5,6 +5,7 @@
 **Infosys Springboard Internship Program**  
 
 This repository is part of the Infosys Springboard Internship Program and focuses on **MediAlert: AI Anomaly Detection for Smarter Healthcare Insights**. The project addresses healthcare fraud detection using machine learning and deep learning techniques.
+![download (2)](https://github.com/user-attachments/assets/306f5ab0-412d-4888-a3d5-117488a8f65d)
 
 ---
 
